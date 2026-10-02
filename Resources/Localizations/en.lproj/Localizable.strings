@@ -7,6 +7,22 @@
 "关于 WeChatBridge…" = "About WeChatBridge…";
 "退出 WeChatBridge" = "Quit WeChatBridge";
 
+/* Main menu (AppKit entry, replacing the default menu the SwiftUI shell synthesized) */
+"隐藏 WeChatBridge" = "Hide WeChatBridge";
+"隐藏其他" = "Hide Others";
+"显示全部" = "Show All";
+"编辑" = "Edit";
+"撤销" = "Undo";
+"重做" = "Redo";
+"剪切" = "Cut";
+"拷贝" = "Copy";
+"粘贴" = "Paste";
+"全选" = "Select All";
+"窗口" = "Window";
+"最小化" = "Minimize";
+"缩放" = "Zoom";
+"关闭" = "Close";
+
 /* Forward target menus */
 "%@ 等 %d 个" = "%@ (%d files)";
 "在 Finder 中显示" = "Show in Finder";
@@ -17,6 +33,7 @@
 "发给 WeSight" = "Send to WeSight";
 "发给 DeepSeek Harness" = "Send to DeepSeek Harness";
 "沉淀到 Obsidian" = "Save to Obsidian";
+"沉淀到文件夹" = "Save to Folder";
 "添加应用…" = "Add an App…";
 
 /* Forward targets */
@@ -31,7 +48,13 @@
 "豆包" = "Doubao";
 "WeSight" = "WeSight";
 "Obsidian" = "Obsidian";
+"文件夹" = "the folder";
 "剪贴板" = "the clipboard";
+
+/* Knowledge deliveries — land quietly, so their success gets said */
+"已保存到 %@" = "Saved to %@";
+"在访达中显示" = "Reveal in Finder";
+"打开笔记" = "Open Note";
 
 /* Share extension — no interface; only a failure still speaks */
 "系统没有返回文件。" = "The system returned no file.";
@@ -109,6 +132,7 @@
 "激活 WeSight 并直接粘贴到输入框。" = "Brings WeSight forward and pastes straight into its input.";
 "激活 DeepSeek Harness 并直接粘贴到输入框。" = "Brings DeepSeek Harness forward and pastes straight into its input.";
 "把聊天记录转成 Markdown，写入选定的 Obsidian 知识库。" = "Turns the chat archive into Markdown and writes it into the selected Obsidian vault.";
+"把聊天记录转成 Markdown 和附件，写入选定的文件夹。" = "Turns the chat into Markdown and attachments in the folder you choose.";
 "只放进剪贴板，去哪儿按 ⌘V 由你决定。" = "Puts them on the clipboard and leaves the ⌘V to you.";
 "转发时从你自己的清单里挑一个 App，激活它并粘贴。" = "Pick an app from your own list when you forward; WeChatBridge brings it forward and pastes.";
 "未注册" = "Not registered";
@@ -125,10 +149,13 @@
 "只粘贴文件路径" = "Paste path only";
 "给终端类应用用：粘贴的是带引号的文件路径，跟把文件拖进终端一样。" = "For terminal-style apps: pastes the quoted file path, exactly as dropping the file on a terminal would.";
 "Obsidian 沉淀" = "Obsidian";
+"文件夹沉淀" = "Folder";
 "知识库文件夹" = "Vault folder";
+"目标文件夹" = "Destination folder";
 "尚未选择" = "Not selected yet";
 "选择文件夹…" = "Choose Folder…";
 "选择知识库" = "Choose Vault";
+"选择目标文件夹" = "Choose Destination Folder";
 "子文件夹" = "Subfolder";
 "聊天 Markdown 与原始 ZIP 会写入这个目录。" = "Chat Markdown and the original ZIP are written under this folder.";
 
@@ -423,3 +450,83 @@
 "已保存更改。" = "Changes saved.";
 "快捷键：⌃⌥1–9 把对应的启用场景用于下次转发；可把场景包 JSON 拖进此列表导入。" = "Shortcut: Ctrl+Option+1-9 uses the matching enabled scene for the next forward; you can also drop scene package JSON files onto this list to import.";
 "「%@」已安装同版本场景。覆盖将更新场景内容，本地的启用状态和群绑定会保留。" = "\"%@\" is already installed at the same version. Overwriting updates the scene; its local enabled state and group bindings are kept.";
+
+/* Batch collection */
+"%d 批 · %@ · %@" = "%d batches · %@ · %@";
+"M月d日 HH:mm" = "MMM d, HH:mm";
+"上一批：%@" = "Last batch: %@";
+"上一组已保存为待发送；后续分享加入当前这组。" = "The previous collection is saved as a draft. New shares go into this collection.";
+"交付中" = "Delivering";
+"交付到" = "Deliver to";
+"交付被中断，原始文件已保留。请确认目标附件后再重试。" = "Delivery was interrupted. Original files are safe. Check the target attachments before retrying.";
+"保存" = "Save";
+"保存 %d 个文件" = "Save %d files";
+"保存为待发送" = "Save as draft";
+"保存到 Obsidian" = "Save to Obsidian";
+"保存到文件夹" = "Save to folder";
+"修改名称" = "Rename";
+"分批收集" = "Batch collection";
+"分批收集 · %@" = "Batch collection · %@";
+"分批收集到微信流" = "Collect in WeChatBridge";
+"复制 %d 个文件" = "Copy %d files";
+"复制关键词" = "Copy search text";
+"复制文件" = "Copy files";
+"多次分享，收齐后一起发送" = "Share multiple batches, then deliver them together";
+"完成并发送" = "Finish and deliver";
+"将 %d 批原始文件移到废纸篓，可从废纸篓恢复。" = "Move %d batches of original files to Trash. You can restore them from Trash.";
+"将这组收集移到废纸篓？" = "Move this collection to Trash?";
+"已交付" = "Delivered";
+"已保存到 Obsidian" = "Saved to Obsidian";
+"已保存到文件夹" = "Saved to folder";
+"已复制文件" = "Files copied";
+"已执行粘贴，请在 %@ 确认附件后发送。" = "Paste performed. Check the attachments in %@ before sending.";
+"已识别约 %d 条 · %d 批条数未知" = "About %d messages recognized · %d batches with unknown counts";
+"开始新的收集" = "Start new collection";
+"待发送" = "Draft";
+"待重试" = "Needs retry";
+"撤销" = "Undo";
+"收集中" = "Collecting";
+"收集名称" = "Collection name";
+"收集记录无法读取，原始文件已保留。" = "Collection records could not be read. Original files are safe.";
+"文件夹" = "Folder";
+"文字、图片和视频保留在原始 ZIP 中。" = "Text, images and videos remain in the original ZIP files.";
+"未能读取位置参考，原始文件已保存。" = "Position references could not be read. Original files are saved.";
+"条数暂不可用" = "Message count unavailable";
+"正在交付，请稍后操作。" = "Delivery is in progress. Please wait.";
+"正在保存第 %d 批…" = "Saving batch %d…";
+"正在保存第一批…" = "Saving the first batch…";
+"目标应用" = "target app";
+"目标未能接收附件，原始文件已保留。" = "The target could not receive the attachments. Original files are safe.";
+"直接交付，不附加场景" = "Deliver directly without a scene";
+"知道了" = "Dismiss";
+"第 %d 批" = "Batch %d";
+"约 %d 条" = "About %d messages";
+"继续在微信分享到同一入口。" = "Keep sharing to the same entry in WeChat.";
+"继续收集" = "Continue collecting";
+"继续收集 · %d 批" = "Continue collecting · %d batches";
+"较早一条" = "Earlier boundary";
+"较晚一条" = "Later boundary";
+"这一批未收到，前 %d 批已保存：%@" = "This batch was not received; the previous %d batches are safe: %@";
+"这组收集没有文件。" = "This collection has no files.";
+"部分收集文件已不存在，请查看批次。" = "Some collection files are missing. Check the batches.";
+"附加到 %@" = "Attach to %@";
+"隐藏浮条，保留收集" = "Hide the panel and keep the collection";
+"收起首尾" = "Hide boundaries";
+"查看首尾" = "View boundaries";
+"查看批次" = "View batches";
+"收起批次" = "Hide batches";
+"重试交付" = "Retry delivery";
+"等待交付超时，原始文件已保留。请重新选择目标。" = "Delivery timed out. Original files are safe. Choose a target again.";
+"新批次已加入另一组收集，可在记录里查看。" = "New batches went into another collection. Find it in History.";
+"尚未收到文件" = "No files received yet";
+"本批：%@" = "This batch: %@";
+"请输入群名或聊天人，最多 200 字。" = "Enter a group or contact name, up to 200 characters.";
+"请先补充每批的群名或聊天人。" = "Add a group or contact name to every batch before delivering.";
+"删除当前批次" = "Delete this batch";
+"批次已移到废纸篓。" = "The batch was moved to Trash.";
+"删除批次" = "Delete batch";
+"群名或聊天人" = "Group or contact name";
+"用于本组未命名批次和后续批次" = "Use for unnamed and future batches in this collection";
+"修改群名或聊天人" = "Edit group or contact name";
+"正在识别群名或聊天人…" = "Recognizing the group or contact name…";
+"识别当前微信" = "Recognize current WeChat chat";
